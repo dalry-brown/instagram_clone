@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Login user={user} setUser={serUser} pwd={pwd} setPwd={setPwd} handleLogin={handleLogin}/>}/>
+        <Route path="/" element={<Login user={user} setUser={setUser} pwd={pwd} setPwd={setPwd} handleLogin={handleLogin}/>}/>
         <Route path="/register" element={<Register email={email} setEmail={setEmail} fullname={fullname} setFullname={setFullname} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleRegistration={handleRegistration}/>}/>
         <Route path="/landingpage" element={<LandingPage/>}/>
       </Routes>
