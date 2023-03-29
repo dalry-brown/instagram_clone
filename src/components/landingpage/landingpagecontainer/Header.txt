@@ -1,0 +1,21 @@
+        <header>
+            <div className="heading">
+                <h1>Instagram</h1>
+                <button><FaCaretDown/></button>
+            </div>
+            <div className="right">
+                <input type="text" role='searchbox' placeholder='Search'/>
+                <button className='heart'><FaHeart style={{color: "red"}}/></button>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><p>Johny</p></li>
+                <li><p>Johny</p></li>
+                <li><p>Johny</p></li>
+                <li><p>Johny</p></li>
+                <li><p>Johny</p></li>
+                <li><p>Johny</p></li>
+                <li><p>Johny</p></li>
+            </ul>
+        </nav>

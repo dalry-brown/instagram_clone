@@ -1,9 +1,12 @@
 import React from 'react'
+import LandingPageContainer from './LandingPageContainer'
 import '../Style/landingpage.css'
 
 const LandingPage = () => {
   return (
-    <div>LandingPage</div>
+    <div className="landingpage">
+      <LandingPageContainer/>
+    </div>
   )
 }
 

@@ -1,0 +1,34 @@
+        <section>
+            <ul>
+                <li className='userAvatar'></li>
+                <li>
+                    <span>username .2h</span><br/>
+                    <span>audio .original audio</span>
+                </li>
+            </ul>
+            <button><FaEllipsisH/></button>
+        </section>
+        <section></section>
+        <section>
+            <section className="icons">
+                <div className="left">
+                    <FaHeart/>
+                    <FaComment/>
+                    <FaForward/>
+                </div>
+                <div className="right">
+                    <FaBookmark/>
+                </div>
+            </section>
+            <section className='likedby'>
+                <div className="avatars">
+                    <div className="likeimg1"></div>
+                    <div className="likeimg2"></div>
+                </div>
+                <p>Liked by <span style={{fontWeight: "600", cursor: "pointer"}}>name</span> and 10 others</p>
+            </section>
+            <section className='comment'>
+                <p>Lorem ipsum dolor sit amet</p>
+                <a href="#">view all 2 comments</a>
+            </section>
+        </section>
