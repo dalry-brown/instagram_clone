@@ -1,12 +1,37 @@
 import React from 'react'
-import { FaHeart, FaCaretDown } from 'react-icons/fa'
+import instagramLogo from'../../../../src/images/pngegg.png'
+import { AiOutlineHeart, AiOutlineCaretDown } from 'react-icons/ai'
 import "../../../Style/landingpage.css"
 
 const Header = () => {
   return (
-    <header style={{backgroundColor: 'yellow'}}>
-        Header
-    </header>
+    <>
+        <header>
+            <div className="heading">
+                <h1><img src={instagramLogo} alt="instagramlogo" /></h1>
+                <button><AiOutlineCaretDown/></button>
+            </div>
+            <div className="right">
+                <input type="text" role='searchbox' placeholder='Search'/>
+                <button className='headerHeart'><AiOutlineHeart/></button>
+            </div>
+        </header>
+        <nav>
+            <div className="navcontainer">
+                <ul>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                </ul>
+            </div>
+        </nav>
+    </>
   )
 }
 
