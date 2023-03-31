@@ -16,9 +16,7 @@ const Bar = () => {
             <li><AiOutlineMessage/><span className='labels'>Messages</span></li>
             <li className='heart'><AiOutlineHeart/><span className='labels'>Notification</span></li>            
             <li><AiOutlinePlusSquare/><span className='labels'>Create</span></li>
-            <li className="avatar"><AiFillCiCircle/></li>
-            <li className='menu'><AiOutlineMenu/><span className='labels'>More</span></li>
-            <li className='menu'><AiOutlineMenu/><span className='labels'>More</span></li>
+            <li><AiFillCiCircle/><span className='labels'>Profile</span></li>
             <li className='menu'><AiOutlineMenu/><span className='labels'>More</span></li>
         </ul>
     </footer>
