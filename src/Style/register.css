@@ -1,3 +1,195 @@
-body{
-    background-color: white;
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+
 }
+
+.signup-area{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+h1{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    font-size: 45px;
+    margin-bottom: 0.05em;
+}
+
+.footer{  
+    margin-top: 1.5em;
+    font-family: 'Abel', sans-serif;
+     
+}
+
+
+
+.sumsg{
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    color: #868585;
+   
+}
+
+.or{
+    font-family: 'Abel', sans-serif; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    place-content: space-evenly;
+    color: #868585;
+    font-weight: bolder;
+}
+
+.or p{
+    padding: 0 0.35em;
+}
+
+.lines{
+    border: rgba(125, 121, 121, 0.236) solid 1px ;
+    width: 100%;
+    height: 0.015em;
+}
+
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.body {
+    box-sizing: border-box;
+    align-self: center;
+    align-items: center;
+    font-size: large;
+    font-family: 'Abel', sans-serif;
+    width: 20em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:#fff;
+    margin: 0;
+    color: black;
+    justify-content: center;
+    padding: 0 .5em;
+  
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    padding-bottom: 1rem;
+}
+
+
+a{
+    color:darkblue;
+}
+ 
+a:visited {
+    color:blue;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"],
+button,
+textarea {
+font-family: 'Abel', sans-serif;
+  font-size: 15px;
+  padding: 0.55rem;
+  border: solid rgba(172, 160, 160, 0.129) 1px;
+  color: #0000006f;
+  border-radius: 0.25em;
+  background-color: #efe8e80d;
+}
+
+.fbtn{
+    color: #fff;
+    font-size: 15px;
+    
+}
+
+.conditions{
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    font-size: large;
+    color: #868585;
+    
+}
+
+em{
+    color: #3f3c3cf4;
+}
+
+label,
+button {
+  margin-top: 0.25rem;
+  
+}
+
+.instructions {
+    font-size: 12px;
+    border-radius: 1rem;
+    background: #11111183;
+    color: #fff;
+    padding: 0.15rem;
+    position: relative;
+    bottom: -4.5px;
+}
+
+.instructions > svg {
+    margin-right: 0.25rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.line {
+    display: inline-block;
+}
+
+button{
+    padding: 0.25rem;
+    width: auto;
+    background-color: rgba(9, 114, 212, 0.653);
+}
+
+
