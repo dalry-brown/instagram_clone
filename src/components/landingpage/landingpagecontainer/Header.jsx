@@ -19,15 +19,16 @@ const Header = () => {
         <nav>
             <div className="navcontainer">
                 <ul>
-                    <li><p></p></li>
-                    <li><p></p></li>
-                    <li><p></p></li>
-                    <li><p></p></li>
-                    <li><p></p></li>
-                    <li><p></p></li>
-                    <li><p></p></li>
-                    <li><p></p></li>
-                    <li><p></p></li>
+                    <li><li><p></p></li>name</li>
+                    <li><li><p></p></li>name</li>
+                    <li><li><p></p></li>name</li>
+                    <li><li><p></p></li>name</li>
+                    <li><li><p></p></li>name</li>
+                    <li><li><p></p></li>name</li>
+                    <li><li><p></p></li>name</li>
+                    <li><li><p></p></li>name</li>
+                    <li><li><p></p></li>name</li>
+                    <li><li><p></p></li>name</li>
                 </ul>
             </div>
         </nav>

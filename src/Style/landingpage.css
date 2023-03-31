@@ -16,6 +16,7 @@ h1{
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
 }
 
 h1 img{
@@ -23,6 +24,7 @@ h1 img{
 }
 
 .heading{
+  box-sizing: border-box;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -37,8 +39,12 @@ h1 img{
 
 .heading button svg{
   margin: 0;
-  font-size: 2em;
+  width: 1.5em;
+  height: 1.7em;
   color: rgb(51, 51, 51);
+  cursor: pointer;
+  padding-bottom: .2em;;
+  
 }
 
 header .right{
@@ -79,8 +85,9 @@ nav{
 }
 
 .navcontainer{
-  padding: 1em .1em;
+  padding: 1em .1em 0em .1em;
   overflow-x: scroll;
+  max-width: 40em;
   width: 22em;
 }
 ::-webkit-scrollbar {
@@ -111,14 +118,23 @@ nav ul{
   align-items: center;
 }
 
-nav ul li{
+nav ul li li{
+  box-sizing: border-box;
   padding: 0;
-  margin: 0 .7em;
+  margin: 0 .7em -.5em .8em;
   list-style: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+nav ul li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
-nav ul li p{
+nav ul li li p{
   width: 3.5em;
   height: 3em;
   background-color: lightgray;
@@ -144,8 +160,12 @@ main {
   height: 100%;
   background-color: white;
   width: 97%;
-  max-width: 30em;
+  max-width: 27em;
   margin: auto;
+}
+
+.cardcontainer svg{
+  cursor: pointer;
 }
 
 .posthead{
@@ -166,8 +186,8 @@ main {
 }
 
 .posthead section:nth-of-type(2) svg{
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .bodyandfooter{
@@ -238,16 +258,21 @@ main {
 
 h2{
   margin: 0;
-  font-size: 1em;
+  font-size: .8em;
+  font-weight: 520;
+  cursor: pointer;
 }
 
-.right p{
+.posthead .right p{
   margin: 0 .2em 0 0;
 }
 
-.right p svg{
-  width: 3em;
-  height: 3em;
+.posthead .right p svg{
+  width: 2em;
+  height: 2em;
+  outline: 1.9px solid #e6683c;
+  outline-offset: .0009em;
+  border-radius: 50%;
 } 
 
 .postbody{
@@ -260,7 +285,7 @@ h2{
   margin: 0 .5em;
   background-color: lightgray;
   width: 100%;
-  height: 24em;
+  height: 27em;
 }
 
 .navigation{
@@ -334,10 +359,22 @@ footer ul li svg{
   grid-template-rows: 92% 8%;
 }
 
+@media only screen and (min-width: 530px){
+  .navcontainer{
+    width: 29em;
+  }
+}
+
+@media only screen and (min-width: 615px){
+  .navcontainer{
+    width: 35em;
+  }
+}
+
 @media only screen and (min-width: 776px) {
   .landingpagecontainer {
     box-sizing: border-box;
-    background-color: pink;
+    background-color: white;
     display: grid;
     width: 100%;
     height: 100vh;
@@ -384,6 +421,15 @@ footer ul li svg{
     border-radius: 5px;
   }
 
+  footer ul .insta:hover{
+    background-color: transparent;
+    cursor: auto;
+  }
+
+  footer ul .insta img:hover{
+    cursor: pointer;
+  }
+
   footer ul li span{
     display: block;
   }
@@ -393,7 +439,7 @@ footer ul li svg{
   }
 
   .insta{
-    margin: 1.6em 0 1.4em 0;
+    margin: 2.8em 0 1.5em 0;
   }
 
   .menu{
@@ -412,9 +458,144 @@ footer ul li svg{
     display: block;
   }
 
+  .navigation .commentheader{
+    margin: 2em 1em 1em 1em;
+    cursor: pointer;
+  }
+
+  .navigation .commentheader ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation .commentheader ul li:nth-of-type(2){
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    place-content: space-between;
+  }
+
+  .commentheader li{
+    list-style: none;
+  }
+
+  .commentheader ul li svg{
+    width: 4em;
+    height: 4em;
+    margin-right: .2em;
+  }
+
+  .commentheader a{
+    text-decoration: none;
+    color: rgb(0, 60, 255);
+    font-size: 1.1em;
+    font-size: .9em;
+  }
+
+  .commentheader p{
+    font-size: .9em;
+  }
+
+  .bold2{
+    font-weight: 550;
+  }
+
+  .navigation .suggestion{
+    cursor: pointer;
+    margin: 2em 0 1em 0;
+  }
+
+  .navigation .suggestion ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation .suggestion ul li:nth-of-type(2){
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    place-content: space-between;
+  }
+
+  .suggestion li{
+    list-style: none;
+  }
+
+  .suggestion ul li svg{
+    outline: 2px solid #e6683c;
+    outline-offset: .1px;
+    border-radius: 50%;
+    width: 2.2em;
+    height: 2.2em;
+    margin-right: .9em;
+  }
+
+  .suggestion a{
+    text-decoration: none;
+    color: rgb(0, 60, 255);
+    font-size: .7em;
+  }
+
+  .suggestion p{
+    font-size: .8em;
+    font-size: .7em;
+    font-weight: 600;
+  }
+
+  .bold2{
+    font-weight: 550;
+  }
+
+  .idcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .idcontainer p{
+    margin: 0;
+    font-weight: 350;
+  }
+
+  .navigation section:nth-of-type(2){
+    display: block;
+  }
+
+  .commentBody{
+      box-sizing: border-box;
+      padding: 0 1em 1em 1em;
+  }
+
+  .commentBody .description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    place-content: space-between;
+  }
+
+  .commentBody .description p{
+    font-size: .85em;
+    margin: 0;
+    font-weight: 350; 
+  }
+
+  .commentBody .description a{
+    font-size: .75em;
+    text-decoration: none;
+    color: black; 
+  }
+
   .landingpagecontainer {
     box-sizing: border-box;
-    background-color: pink;
+    background-color: white;
     display: grid;
     width: 100%;
     height: 100vh;
@@ -425,8 +606,8 @@ footer ul li svg{
   }
 
   footer ul li svg{
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.8em;
+    height: 1.8em;
   }
 }
 
@@ -437,7 +618,7 @@ footer ul li svg{
 
   .landingpagecontainer {
     box-sizing: border-box;
-    background-color: pink;
+    background-color: white;
     display: grid;
     width: 100%;
     height: 100vh;
@@ -451,6 +632,7 @@ footer ul li svg{
     text-align: left;
     width: 100%;
     height: 100%;
+    border-right: .1em solid lightgray;
   }
 
   footer ul li, .search, .heart, .menu{
@@ -481,7 +663,5 @@ footer ul li svg{
   .menu{
     width: 93%;
   }
-
-
 
 }
