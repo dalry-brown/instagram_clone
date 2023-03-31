@@ -9,7 +9,7 @@ const Bar = () => {
     <footer>
         <ul>
             <li className='insta'><AiOutlineInstagram className='instaIcon'/><span className='instatext'><img src={instagramLogo} alt="instagramlogo" /></span></li>
-            <li><AiOutlineHome strokeWidth="8"/><span className='labels'>Home</span></li>
+            <li><AiOutlineHome/><span  className='labels'>Home</span></li>
             <li className='search'><AiOutlineSearch/><span className='labels'>Search</span></li>
             <li><AiOutlineCompass/><span className='labels'>Explore</span></li>
             <li><BiVideo/><span className='labels'>Reels</span></li>            

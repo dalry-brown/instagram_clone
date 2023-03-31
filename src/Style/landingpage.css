@@ -629,6 +629,7 @@ footer ul li svg{
   }
 
   footer ul{
+    box-sizing: border-box;
     text-align: left;
     width: 100%;
     height: 100%;
@@ -645,12 +646,17 @@ footer ul li svg{
     padding-left: 1em;
   }
 
+  footer ul li:nth-of-type(2){
+    width: 95%;
+  }
+ 
   .instaIcon{
     display: none;
   }
 
   .instatext{
     display: block;
+    padding-bottom: 1em;
   }
 
   .labels {
