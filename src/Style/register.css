@@ -108,13 +108,13 @@ input[type="text"],
 input[type="password"],
 button,
 textarea {
-font-family: 'Abel', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 15px;
   padding: 0.55rem;
-  border: solid rgba(172, 160, 160, 0.129) 1px;
+  border: solid rgba(241, 33, 33, 0.129) 1px;
   color: #0000006f;
   border-radius: 0.25em;
-  background-color: #efe8e80d;
+
 }
 
 .fbtn{
@@ -142,13 +142,13 @@ button {
 }
 
 .instructions {
-    font-size: 12px;
-    border-radius: 1rem;
-    background: #11111183;
-    color: #fff;
-    padding: 0.15rem;
-    position: relative;
-    bottom: -4.5px;
+    margin-top: .2em;
+    background-color: black;
+    color: white;
+    font-size: .6em;
+    border-radius: 5px;
+    width: 23em;
+    padding: .4em .3em;
 }
 
 .instructions > svg {
