@@ -2,6 +2,8 @@ import React from 'react'
 import instagramLogo from'../../../../src/images/pngegg.png'
 import { AiOutlineHeart, AiOutlineCaretDown } from 'react-icons/ai'
 import "../../../Style/landingpage.css"
+import av1 from '../../../images/av1.jpg'
+import { useState } from 'react'
 
 const Header = () => {
   return (
@@ -19,7 +21,7 @@ const Header = () => {
         <nav>
             <div className="navcontainer">
                 <ul>
-                    <li><li><p></p></li>name</li>
+                    <li><li><img src={av1} alt="avatar1" /></li>name</li>
                     <li><li><p></p></li>name</li>
                     <li><li><p></p></li>name</li>
                     <li><li><p></p></li>name</li>
