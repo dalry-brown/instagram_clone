@@ -121,7 +121,7 @@ nav ul{
 nav ul li li{
   box-sizing: border-box;
   padding: 0;
-  margin: 0 .7em -.5em .8em;
+  margin: 0 .7em .35em .8em;
   list-style: none;
   text-align: center;
   cursor: pointer;
@@ -288,6 +288,7 @@ h2{
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  min-height: 15em;
 }
 
 .postbody .maincontent img{
@@ -491,7 +492,8 @@ footer ul li svg{
     list-style: none;
   }
 
-  .commentheader ul li svg{
+  .commentheader ul li{
+    box-sizing: border-box;
     width: 4em;
     height: 4em;
     margin-right: .2em;
@@ -563,6 +565,7 @@ footer ul li svg{
   }
 
   .idcontainer{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -664,7 +667,7 @@ footer ul li svg{
 
   .instatext{
     display: block;
-    padding-bottom: 1em;
+    padding-bottom: 0;
   }
 
   .labels {

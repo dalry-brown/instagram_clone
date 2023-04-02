@@ -12,7 +12,7 @@ const Login = () => {
       <form action="">
         <input type="text" name="" id=""  placeholder="Username" /><br />
         <input type="password" name="" id="" placeholder="Password"/><br />
-        <button id= "submit-id">Login</button>
+        <Link to='/landingpage'><button id= "submit-id">Login</button></Link>
       </form>
 
 
