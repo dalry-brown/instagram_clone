@@ -3,42 +3,48 @@
 .header{
     display: flex;
     flex-direction: column;
-    gap: 0.35em;
-
 }
 
 .signup-area{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    
+    padding: 0 2em;
 }
 
-h1{
+.container h1{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.signup-area h1 img{
+    width: 9em;
+}
+
+.signup-area p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 1em 0;
+    color: rgb(142, 142, 142);
+    font-size: 17px;
+    font-weight: 540;
+    line-height: 20px;
     text-align: center;
-    font-family: 'Dancing Script', cursive;
-    font-weight: bolder;
-    font-size: 45px;
-    margin-bottom: 0.05em;
 }
-
-.footer{  
-    margin-top: 1.5em;
-    font-family: 'Abel', sans-serif;
-     
-}
-
-
 
 .sumsg{
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     font-size: large;
     font-weight: bolder;
-    color: #868585;
-   
+    color: #868585; 
 }
 
 .or{
+    /* box-sizing: border-box; */
     font-family: 'Abel', sans-serif; 
     display: flex;
     flex-direction: row;
@@ -48,16 +54,23 @@ h1{
     place-content: space-evenly;
     color: #868585;
     font-weight: bolder;
+    padding-top: .5em;
 }
 
 .or p{
+    margin: 0;
     padding: 0 0.35em;
+    font-size: .85em;
 }
 
 .lines{
     border: rgba(125, 121, 121, 0.236) solid 1px ;
     width: 100%;
-    height: 0.015em;
+    height: 1px;
+    padding: 0;
+    margin-bottom: .1em;
+    border: none;
+    background-color: rgba(125, 121, 121, 0.236);
 }
 
 .container{
@@ -86,57 +99,90 @@ h1{
     
 }
 
-form {
+.signup-area form {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: content;
     flex-grow: 1;
-    padding-bottom: 1rem;
+    gap: .1em;
 }
 
 
-a{
+.success a{
     color:darkblue;
 }
  
-a:visited {
+.success a:visited {
     color:blue;
 }
 
-input[type="email"],
-input[type="text"],
-input[type="password"],
-button,
-textarea {
-  font-family: 'Abel', sans-serif;
-  font-size: 15px;
+.reg-form input,
+.reg-form textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(250, 250, 250);
+  font-size: 14px;
+  font-weight: normal;
   padding: 0.55rem;
   border: solid rgba(241, 33, 33, 0.129) 1px;
   color: #0000006f;
   border-radius: 0.25em;
+  outline: none;
+}
 
+.reg-form input:focus,
+.reg-form textarea:focus{
+    outline: .1px solid lightgray;
+}
+
+.reg-form button{
+    color: #fff;
+    font-size: 15px;
+    border-radius: .7em;
+    background-color: #1bb1fb;
+    outline: none;
+    border: transparent;
+    padding: .8em 0;
+    cursor: pointer;
 }
 
 .fbtn{
     color: #fff;
     font-size: 15px;
-    
+    background-color: rgba(9, 114, 212, 0.653);
+    outline: none;
+    border: transparent;
+    border-radius: .7em;
+    padding: .7em 0;
+    cursor: pointer;
 }
 
-.conditions{
+#conditions{
     text-align: center;
     font-family: 'Abel', sans-serif;
-    font-size: large;
-    color: #868585;
-    
+    font-size: .75em;
+    padding-top: 1em;
+    color: #868585; 
 }
 
-em{
-    color: #3f3c3cf4;
+.condition .footer{
+    margin: 0;
 }
 
-label,
-button {
+.anaccount{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8em;
+    font-weight: 100;
+    color: black;
+}
+
+a{
+    font-size: .8em;
+    text-decoration: none;
+    color: rgb(4, 148, 196);
+}
+
+.reg-form label,
+.reg-form button {
   margin-top: 0.25rem;
   
 }
@@ -147,7 +193,7 @@ button {
     color: white;
     font-size: .6em;
     border-radius: 5px;
-    width: 23em;
+    width: 80%;
     padding: .4em .3em;
 }
 
@@ -186,10 +232,49 @@ button {
     display: inline-block;
 }
 
-button{
-    padding: 0.25rem;
-    width: auto;
-    background-color: rgba(9, 114, 212, 0.653);
-}
+#get{
+    font-size: 14px;
+  }
+
+  .container1{
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 4px;
+    width: 9em;
+    padding: .1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container1 img{
+    padding: .4em;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+  }
+
+  .container1 p{
+    color: white;
+    font-size: 10px;
+    margin: 3px 6px 0 0;
+  }
+  .container1 p span{
+    padding-bottom: 20px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .dis{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+
 
 

@@ -4,7 +4,8 @@ import { useRef, useState, useEffect } from 'react'
 // import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaCheck, FaTimes, FaInfoCircle, FaFacebookF } from 'react-icons/fa'
-
+import instagramLogo from'../images/pngegg.png'
+import {Link} from 'react-router-dom'
 
 //const REGISTER_URL = '/register'
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,24}/
@@ -15,8 +16,10 @@ const Register = () => {
     const errRef = useRef();
 
     const [name, setName] = useState('');
-
+    const [nameFocus, setNameFocus] = useState(false)
+    
     const [email, setEmail] = useState('');
+    const [emailFocus, setEmailFocus] = useState(false)
     
     const [user, setUser] = useState('');
     const [validName, setValidName] = useState(false);
@@ -32,10 +35,6 @@ const Register = () => {
 
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
-
-    useEffect(() => {
-        userRef.current.focus();
-    }, [])
 
     useEffect(() => {
         setValidName(USER_REGEX.test(user));
@@ -91,7 +90,7 @@ const Register = () => {
 return (
 <>
     {success ? (
-        <section>
+        <section className='success'>
             <h1>Success!</h1>
             <p>
                 <a href="#">Sign In</a>
@@ -103,37 +102,20 @@ return (
             <div className="signup-area"> 
                 <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>      
                 <div className="header">
-                    <h1>Instagram</h1>
+                    <h1><img src={instagramLogo} alt="instagramlogo" /></h1>
                     <p className='signup-msg'>Sign up to see photos and videos from your friends </p>
                     <button className='fbtn'> <FaFacebookF/> <span>Log in with facebook</span> </button>
                     <div className="or">
                         <section className='lines'></section>
-                        <p>OR</p>
+                        <p className='por'>OR</p>
                         <section className='lines'></section>
                     </div>
                 </div>
     
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="email"></label>
-                        <input value={email} 
-                        onChange={(e) => setEmail(e.target.value)}
-                        type="email" 
-                        placeholder="Email" 
-                        id="email" 
-                        name="email" />
-                    <label htmlFor="name"></label>
-                        <input 
-                            value={name}
-                            name="name" 
-                            onChange={(e) => setName(e.target.value)} 
-                            type="text"   
-                            id="name"
-                            placeholder="Full Name" 
-                        />
-                    <label htmlFor="username">
-                        <FaCheck className={validName ? "valid" : "hide"} />
-                        <FaTimes className={validName || !user ? "hide" : "invalid"} />
-                    </label>
+                <form className='reg-form' onSubmit={handleSubmit}>
+                    <FaCheck className={validName && userFocus ? "valid" : "hide"} />
+                    <FaTimes className={validName || !user ? "hide" : "invalid"} />                     
+                    <label htmlFor="Username"></label>
                     <input
                         type="text"
                         id="username"
@@ -147,17 +129,38 @@ return (
                         onFocus={() => setUserFocus(true)}
                         onBlur={() => setUserFocus(false)}
                         placeholder ="Username"
-                    />
+                    />   
                     <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
                         <FaInfoCircle/>
                         4 to 24 characters.<br />
                         Must begin with a letter.<br />
                         Letters, numbers, underscores, hyphens allowed.
-                    </p>
+                    </p>                                                        
+                    <label htmlFor="name"></label>
+                        <input 
+                            value={name}
+                            name="name" 
+                            onChange={(e) => setName(e.target.value)} 
+                            type="text"   
+                            id="name"
+                            placeholder="Full Name" 
+                            onFocus={() => setNameFocus(true)}
+                            onBlur={() => setNameFocus(false)}                            
+                        />
+                    <label htmlFor="email"></label>
+                    <input value={email} 
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email" 
+                        placeholder="Email" 
+                        id="email" 
+                        name="email" 
+                        onFocus={() => setEmailFocus(true)}
+                        onBlur={() => setEmailFocus(false)}                        
+                        />
                     <label htmlFor="password">
-                        <FaCheck className={validPwd ? "valid" : "hide"} />
+                        <FaCheck className={validPwd && pwdFocus ? "valid" : "hide"} />
                         <FaTimes className={validPwd || !pwd ? "hide" : "invalid"} />
-                    </label>                        
+                    </label>                         
                     <input
                         type="password"
                         id="password"
@@ -178,7 +181,7 @@ return (
                     </p>
 
                     <label htmlFor="confirm_pwd">
-                        <FaCheck className={validMatch && matchPwd ? "valid" : "hide"} />
+                        <FaCheck className={validMatch && matchPwd && matchFocus ? "valid" : "hide"} />
                         <FaTimes className={validMatch || !matchPwd ? "hide" : "invalid"} />
                     </label>
                     <input
@@ -200,16 +203,28 @@ return (
                     <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
                 </form>
             
-            <p className='conditions'> By signing up you are agreeing to our<em>Terms, Data</em> and <em>Cookies Policy</em></p>
+            <p id='conditions'> By signing up you are agreeing to our Terms, Data and Cookies Policy</p>
             </div>
                 <div className="footer">
                     <p>
-                        Have an account? 
+                        <span className='anaccount'>Have an account?</span> 
                         <span>
                             {/*put router link here*/}
-                            <a href="#"> Sign In </a>
+                            <Link to='/'> Sign In</Link>
                         </span>
                     </p>
+                </div>
+                <p id='get'>Get the app.</p>
+                <div className='dis'>
+                <div className='container1'>
+                    <img src="public/mac-os.png" alt="" />
+                    <p>GET IT ON <br/> <span className='logotext'>App Store</span></p>
+                </div>
+
+                <div className='container1'>
+                    <img src="public/google-play.png" alt="" />
+                    <p>GET IT ON <br/> <span>Google Play</span></p>
+                </div>
                 </div>
             </section>
         </section>
