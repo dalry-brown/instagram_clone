@@ -1,6 +1,6 @@
 Instagram Clone
 
-This app was built by the joint effort of 5 member
+This app was built by the joint effort of 4 member
 
 This application is routed by react router and has 3 routes
 1) / -> login page
